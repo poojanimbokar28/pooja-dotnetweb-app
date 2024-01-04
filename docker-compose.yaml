@@ -1,0 +1,6 @@
+version: '3.8'
+services: # apps containers you want to build and run
+  pooja_app1: # name of appliction for compose
+    image: poojadotnetimg:v1  # image i want to build
+    build: .  # path of dockerfile location -- . means current
+    container_name: poojac1 # it will create container also
