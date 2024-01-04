@@ -4,6 +4,8 @@ services: # apps containers you want to build and run
     image: poojadotnetimg:v1  # image i want to build
     build: .  # path of dockerfile location -- . means current
     container_name: poojac1 # it will create container also
+    ports:
+    - 1076:80 
   pooja_app2:
     image: poojahttpd:version1
     build:
