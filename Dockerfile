@@ -8,5 +8,6 @@ COPY . /pooja-app/
 # we are copying code from folder to inside docker image
 WORKDIR /pooja-app
 RUN dotnet build -o poojabin
-CMD ./poojabin/ashu-webapp  --urls=http://0.0.0.0:5000
+RUN dotnet publish -o pooja_publish -p:AssemblyName=poojadotnet
+CMD ./pooja_publish/poojadotnet --urls=http://0.0.0.0:5000
 # must be the final keyword of dockerfile which will run your app
