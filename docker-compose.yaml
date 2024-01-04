@@ -7,7 +7,7 @@ services: # apps containers you want to build and run
   pooja_app2:
     image: poojahttpd:version1
     build:
-    context: .
+      context: .
       dockerfile: poojahttpd.dockerfile
     container_name: poojac2
     ports:
