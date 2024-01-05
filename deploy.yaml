@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: poojanodeapp1
+  name: poojanodeapp1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poojanodeapp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: poojanodeapp1
+    spec:
+      containers:
+      - image: poojanimbokar28/poojadotnetapp:version13
+        name: poojadotnetapp
+        resources: {}
+status: {}
